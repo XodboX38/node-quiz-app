@@ -386,12 +386,7 @@ export default function App() {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            const storedTheme = localStorage.getItem('theme') || 'light';
-            if (storedTheme === 'dark') {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
+            document.documentElement.className = localStorage.getItem('theme') || 'light';
         }
     }, []);
 
