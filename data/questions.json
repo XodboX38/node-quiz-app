@@ -1,218 +1,510 @@
 {
-  "easy": [
-    {
-      "id": 1,
-      "question": "Which command is used to install packages from a `package.json` file?",
-      "options": ["npm start", "npm install", "npm run", "npm get"],
-      "answer": "npm install",
-      "explanation": "The `npm install` command is used to install all dependencies listed in your `package.json` file."
-    },
-    {
-      "id": 2,
-      "question": "What is the purpose of the `require()` function in Node.js?",
-      "options": ["To define a new function", "To import modules", "To declare a variable", "To run a script"],
-      "answer": "To import modules",
-      "explanation": "The `require()` function is used to import and use modules (both built-in and external) in a Node.js application."
-    },
-    {
-      "id": 3,
-      "question": "What is Node.js built on?",
-      "options": ["Java Virtual Machine", "Python Interpreter", "Google Chrome's V8 Engine", "Apache Server"],
-      "answer": "Google Chrome's V8 Engine",
-      "explanation": "Node.js is a JavaScript runtime built on the V8 engine, which compiles JavaScript code to machine code for fast execution."
-    },
-    {
-      "id": 4,
-      "question": "Which of these is a built-in Node.js module for handling file system operations?",
-      "options": ["`http`", "`fs`", "`path`", "`os`"],
-      "answer": "`fs`",
-      "explanation": "The `fs` (File System) module provides methods for working with the file system, such as reading and writing files."
-    },
-    {
-      "id": 5,
-      "question": "What does `npm` stand for?",
-      "options": ["Node Project Manager", "New Package Module", "Node Package Manager", "Network Package Manager"],
-      "answer": "Node Package Manager",
-      "explanation": "npm is the official package manager for Node.js, and it stands for Node Package Manager."
-    },
-    {
-      "id": 6,
-      "question": "How do you start a Node.js script from the command line?",
-      "options": ["run my-script.js", "execute my-script.js", "node my-script.js", "start my-script.js"],
-      "answer": "node my-script.js",
-      "explanation": "The `node` command is used to execute a Node.js file from the terminal."
-    },
-    {
-      "id": 7,
-      "question": "Is Node.js single-threaded or multi-threaded?",
-      "options": ["Single-threaded", "Multi-threaded", "It depends on the operating system", "It's a mix of both"],
-      "answer": "Single-threaded",
-      "explanation": "Node.js uses a single-threaded event loop to handle requests, making it non-blocking and efficient for I/O-heavy applications."
-    },
-    {
-      "id": 8,
-      "question": "Which global object in Node.js provides information about the current process?",
-      "options": ["`global`", "`process`", "`os`", "`console`"],
-      "answer": "`process`",
-      "explanation": "The `process` object is a global that provides information about and control over the current Node.js process."
-    },
-    {
-      "id": 9,
-      "question": "Which file is used to specify project metadata and dependencies?",
-      "options": ["`main.js`", "`index.html`", "`package.json`", "`app.js`"],
-      "answer": "`package.json`",
-      "explanation": "The `package.json` file acts as a manifest for your Node.js project, listing its name, version, and dependencies."
-    },
-    {
-      "id": 10,
-      "question": "What is an event-driven architecture?",
-      "options": ["A way to write synchronous code", "A design pattern where functions are called randomly", "A system where events trigger code execution", "A method for database connections"],
-      "answer": "A system where events trigger code execution",
-      "explanation": "Event-driven programming uses events to trigger the execution of functions, which is the core of Node.js's non-blocking nature."
-    }
-  ],
-  "medium": [
-    {
-      "id": 11,
-      "question": "What is a 'stream' in Node.js?",
-      "options": ["A data pipe for continuous data flow", "A type of database", "A module for creating animations", "A network connection protocol"],
-      "answer": "A data pipe for continuous data flow",
-      "explanation": "Streams are objects that allow you to read or write data in a continuous, sequential manner, handling data in chunks rather than all at once."
-    },
-    {
-      "id": 12,
-      "question": "What is a 'middleware' in Express.js?",
-      "options": ["A function that only handles errors", "A function that is executed before a route handler", "A tool for creating a database schema", "A class for managing user sessions"],
-      "answer": "A function that is executed before a route handler",
-      "explanation": "Middleware functions in Express.js have access to the request and response objects and are used to perform tasks like authentication and logging before a request reaches its final destination."
-    },
-    {
-      "id": 13,
-      "question": "Explain the concept of 'non-blocking I/O' in Node.js.",
-      "options": ["The program waits for I/O operations to finish", "The program cannot perform I/O operations", "The program executes other code while waiting for I/O to finish", "The program blocks other operations while I/O is in progress"],
-      "answer": "The program executes other code while waiting for I/O to finish",
-      "explanation": "Non-blocking I/O means that Node.js initiates an I/O operation and immediately moves on to execute other code, handling the result later via a callback or event."
-    },
-    {
-      "id": 14,
-      "question": "What is the difference between `global` and `window`?",
-      "options": ["`global` is for browsers, `window` is for Node.js", "`global` is for Node.js, `window` is for browsers", "They are identical", "They are both used for file operations"],
-      "answer": "`global` is for Node.js, `window` is for browsers",
-      "explanation": "`global` is the global namespace object in Node.js, while `window` is the equivalent in web browsers."
-    },
-    {
-      "id": 15,
-      "question": "How do you handle asynchronous operations without using callbacks?",
-      "options": ["`setInterval`", "`async/await` and `Promises`", "`for` loops", "`if/else` statements"],
-      "answer": "`async/await` and `Promises`",
-      "explanation": "Promises and the `async/await` syntax are modern ways to handle asynchronous operations, providing cleaner and more readable code than nested callbacks."
-    },
-    {
-      "id": 16,
-      "question": "What is the purpose of `module.exports` and `exports`?",
-      "options": ["They are used for defining global variables", "They are used to export values from a module", "They are used for creating new files", "They are used for importing external packages"],
-      "answer": "They are used to export values from a module",
-      "explanation": "`module.exports` and `exports` are objects used to expose functionality from a Node.js module so that it can be imported by other files using `require()`."
-    },
-    {
-      "id": 17,
-      "question": "What is the purpose of `package-lock.json`?",
-      "options": ["To lock the project to a single developer", "To provide an exact version of each dependency", "To specify a package's license", "To store the project's source code"],
-      "answer": "To provide an exact version of each dependency",
-      "explanation": "The `package-lock.json` file records the exact version, checksum, and location of every package installed, ensuring consistent builds across different environments."
-    },
-    {
-      "id": 18,
-      "question": "What is 'callback hell'?",
-      "options": ["A bug that crashes the server", "A state where a function is called without a callback", "A situation with deeply nested callbacks", "An error handling pattern"],
-      "answer": "A situation with deeply nested callbacks",
-      "explanation": "Callback hell, also known as the 'Pyramid of Doom,' refers to the unmanageable nesting of callback functions that makes code difficult to read and maintain."
-    },
-    {
-      "id": 19,
-      "question": "How can you debug a Node.js application?",
-      "options": ["`node --debug`", "`node --log`", "`node --trace`", "`node --inspect`"],
-      "answer": "`node --inspect`",
-      "explanation": "The `node --inspect` command enables the V8 inspector, which allows you to debug your Node.js application using tools like Chrome DevTools."
-    },
-    {
-      "id": 20,
-      "question": "What is the `cluster` module used for?",
-      "options": ["To create multiple databases", "To manage user sessions", "To enable multi-core processing", "To compress files"],
-      "answer": "To enable multi-core processing",
-      "explanation": "The `cluster` module allows you to create child processes that share server ports, enabling a Node.js application to take advantage of multi-core systems and improve performance for CPU-intensive tasks."
-    }
-  ],
-  "hard": [
-    {
-      "id": 21,
-      "question": "Differentiate between `process.nextTick()` and `setImmediate()`.",
-      "options": ["`nextTick` runs after the current operation, `setImmediate` runs in the next event loop phase.", "`nextTick` runs in a separate thread, `setImmediate` runs on the main thread.", "They are identical in function.", "`nextTick` is for timers, `setImmediate` is for I/O operations."],
-      "answer": "`nextTick` runs after the current operation, `setImmediate` runs in the next event loop phase.",
-      "explanation": "Both are asynchronous but `process.nextTick()` callbacks are executed before the event loop moves to the next phase, while `setImmediate()` callbacks are executed in the 'check' phase of the event loop."
-    },
-    {
-      "id": 22,
-      "question": "What is a 'Buffer' in Node.js?",
-      "options": ["A type of error", "A temporary storage for binary data", "A tool for handling strings", "A data structure for numbers only"],
-      "answer": "A temporary storage for binary data",
-      "explanation": "The `Buffer` class is used to handle raw binary data. It is a fundamental part of Node.js's I/O operations, such as handling file streams and network packets."
-    },
-    {
-      "id": 23,
-      "question": "How does Node.js handle concurrency?",
-      "options": ["By creating a new thread for each request", "By using a single-threaded event loop and non-blocking I/O", "By relying on the browser's multi-threading", "It cannot handle concurrency"],
-      "answer": "By using a single-threaded event loop and non-blocking I/O",
-      "explanation": "Node.js achieves concurrency by using a single thread to manage an event loop, which handles asynchronous operations without blocking the main thread, making it highly scalable."
-    },
-    {
-      "id": 24,
-      "question": "What is the purpose of `EventEmitter`?",
-      "options": ["To handle network requests", "To read and write files", "To manage and emit events with listeners", "To manage sessions"],
-      "answer": "To manage and emit events with listeners",
-      "explanation": "The `EventEmitter` class is a core part of Node.js's event-driven architecture. It provides a way for objects to emit named events that trigger functions attached to those events."
-    },
-    {
-      "id": 25,
-      "question": "What is 'Piping' in Node.js streams?",
-      "options": ["Connecting two databases", "Connecting the output of one stream to the input of another", "A method for creating a server", "A way to handle errors in streams"],
-      "answer": "Connecting the output of one stream to the input of another",
-      "explanation": "Piping is a mechanism that connects a readable stream to a writable stream, allowing data to flow from one to the other automatically."
-    },
-    {
-      "id": 26,
-      "question": "What is an 'error-first callback'?",
-      "options": ["A function that always returns an error", "A callback function where the first argument is always an error object", "A method for debugging errors in Node.js", "A callback that handles errors only"],
-      "answer": "A callback function where the first argument is always an error object",
-      "explanation": "In Node.js, the 'error-first callback' is a common convention where the first argument of a callback function is reserved for an error object, and the second is for the result."
-    },
-    {
-      "id": 27,
-      "question": "What is the Reactor Pattern in Node.js?",
-      "options": ["A design pattern for creating web servers", "A pattern for managing asynchronous I/O with an event loop", "A method for handling database connections", "A framework for building APIs"],
-      "answer": "A pattern for managing asynchronous I/O with an event loop",
-      "explanation": "The Reactor Pattern is an event-driven design for handling service requests that come in from multiple clients. It uses an event loop to handle requests and dispatch them to appropriate handlers."
-    },
-    {
-      "id": 28,
-      "question": "What is `libuv`?",
-      "options": ["A JavaScript library", "A C++ library that provides the event loop and thread pool", "A Node.js module for security", "An npm package for file uploads"],
-      "answer": "A C++ library that provides the event loop and thread pool",
-      "explanation": "Libuv is a C++ library that provides the event loop, asynchronous I/O, and a thread pool. It is the engine that allows Node.js to perform its non-blocking operations."
-    },
-    {
-      "id": 29,
-      "question": "What is the difference between `spawn()` and `fork()` in the `child_process` module?",
-      "options": ["`spawn` is for Node.js scripts, `fork` is for any command.", "`spawn` returns an object with IPC, `fork` does not.", "`fork` is a special case of `spawn` with IPC enabled.", "They are identical."],
-      "answer": "`fork` is a special case of `spawn` with IPC enabled.",
-      "explanation": "Both create a child process, but `fork()` is a specialized version of `spawn()` that is used to spawn new Node.js processes and establish an Inter-Process Communication (IPC) channel."
-    },
-    {
-      "id": 30,
-      "question": "How would you handle a CPU-intensive task in Node.js?",
-      "options": ["Use a long-running synchronous function", "Use the `cluster` module or `Worker Threads`", "Use `setTimeout` to delay the task", "Run the task inside the main event loop"],
-      "answer": "Use the `cluster` module or `Worker Threads`",
-      "explanation": "CPU-intensive tasks can block the single-threaded event loop. Using the `cluster` module to create multiple processes or `Worker Threads` to run code on separate threads is the recommended approach to prevent this."
-    }
-  ]
+  "nodejs": {
+    "easy": [
+      {
+        "id": 1,
+        "question": "Which of these is a built-in Node.js module for handling file system operations?",
+        "options": ["`http`", "`fs`", "`path`", "`os`"],
+        "answer": "`fs`",
+        "explanation": "The `fs` (File System) module provides methods for working with the file system, such as reading and writing files."
+      },
+      {
+        "id": 2,
+        "question": "What does `npm` stand for?",
+        "options": ["Node Project Manager", "New Package Module", "Node Package Manager", "Network Package Manager"],
+        "answer": "Node Package Manager",
+        "explanation": "npm is the official package manager for Node.js, and it stands for Node Package Manager."
+      },
+      {
+        "id": 3,
+        "question": "How do you start a Node.js script from the command line?",
+        "options": ["run my-script.js", "execute my-script.js", "node my-script.js", "start my-script.js"],
+        "answer": "node my-script.js",
+        "explanation": "The `node` command is used to execute a Node.js file from the terminal."
+      },
+      {
+        "id": 4,
+        "question": "Is Node.js single-threaded or multi-threaded?",
+        "options": ["Single-threaded", "Multi-threaded", "It depends on the operating system", "It's a mix of both"],
+        "answer": "Single-threaded",
+        "explanation": "Node.js uses a single-threaded event loop to handle requests, making it non-blocking and efficient for I/O-heavy applications."
+      },
+      {
+        "id": 5,
+        "question": "Which global object in Node.js provides information about the current process?",
+        "options": ["`global`", "`process`", "`os`", "`console`"],
+        "answer": "`process`",
+        "explanation": "The `process` object is a global that provides information about and control over the current Node.js process."
+      },
+      {
+        "id": 6,
+        "question": "Which file is used to specify project metadata and dependencies?",
+        "options": ["`main.js`", "`index.html`", "`package.json`", "`app.js`"],
+        "answer": "`package.json`",
+        "explanation": "The `package.json` file acts as a manifest for your Node.js project, listing its name, version, and dependencies."
+      },
+      {
+        "id": 7,
+        "question": "What is an event-driven architecture?",
+        "options": ["A way to write synchronous code", "A design pattern where functions are called randomly", "A system where events trigger code execution", "A method for database connections"],
+        "answer": "A system where events trigger code execution",
+        "explanation": "Event-driven programming uses events to trigger the execution of functions, which is the core of Node.js's non-blocking nature."
+      },
+      {
+        "id": 8,
+        "question": "How do you check for uncommitted changes in your Git repository?",
+        "options": ["`git log`", "`git status`", "`git check`", "`git diff`"],
+        "answer": "`git status`",
+        "explanation": "The `git status` command shows you the state of your working directory and staging area, including any uncommitted changes."
+      },
+      {
+        "id": 9,
+        "question": "What is the purpose of the `.gitignore` file?",
+        "options": ["To ignore files from being tracked by Git", "To hide files from the file system", "To specify which files should be committed", "To store repository credentials"],
+        "answer": "To ignore files from being tracked by Git",
+        "explanation": "The `.gitignore` file tells Git which files or folders to intentionally ignore, such as `node_modules` or `env` files."
+      },
+      {
+        "id": 10,
+        "question": "What is the V8 engine in Node.js?",
+        "options": ["A file system module", "A network server", "A JavaScript runtime", "A testing framework"],
+        "answer": "A JavaScript runtime",
+        "explanation": "V8 is Google's open-source high-performance JavaScript engine used by Chrome and Node.js."
+      }
+    ],
+    "medium": [
+      {
+        "id": 11,
+        "question": "What is a 'stream' in Node.js?",
+        "options": ["A data pipe for continuous data flow", "A type of database", "A module for creating animations", "A network connection protocol"],
+        "answer": "A data pipe for continuous data flow",
+        "explanation": "Streams are objects that allow you to read or write data in a continuous, sequential manner, handling data in chunks rather than all at once."
+      },
+      {
+        "id": 12,
+        "question": "What is a 'middleware' in Express.js?",
+        "options": ["A function that only handles errors", "A function that is executed before a route handler", "A tool for creating a database schema", "A class for managing user sessions"],
+        "answer": "A function that is executed before a route handler",
+        "explanation": "Middleware functions in Express.js have access to the request and response objects and are used to perform tasks like authentication and logging before a request reaches its final destination."
+      },
+      {
+        "id": 13,
+        "question": "Explain the concept of 'non-blocking I/O' in Node.js.",
+        "options": ["The program waits for I/O operations to finish", "The program cannot perform I/O operations", "The program executes other code while waiting for I/O to finish", "The program blocks other operations while I/O is in progress"],
+        "answer": "The program executes other code while waiting for I/O to finish",
+        "explanation": "Non-blocking I/O means that Node.js initiates an I/O operation and immediately moves on to execute other code, handling the result later via a callback or event."
+      },
+      {
+        "id": 14,
+        "question": "How do you handle asynchronous operations without using callbacks?",
+        "options": ["`setInterval`", "`async/await` and `Promises`", "`for` loops", "`if/else` statements"],
+        "answer": "`async/await` and `Promises`",
+        "explanation": "Promises and the `async/await` syntax are modern ways to handle asynchronous operations, providing cleaner and more readable code than nested callbacks."
+      },
+      {
+        "id": 15,
+        "question": "What is the purpose of `module.exports` and `exports`?",
+        "options": ["They are used for defining global variables", "They are used to export values from a module", "They are used for creating new files", "They are used for importing external packages"],
+        "answer": "They are used to export values from a module",
+        "explanation": "`module.exports` and `exports` are objects used to expose functionality from a Node.js module so that it can be imported by other files using `require()`."
+      },
+      {
+        "id": 16,
+        "question": "What is the purpose of `package-lock.json`?",
+        "options": ["To lock the project to a single developer", "To provide an exact version of each dependency", "To specify a package's license", "To store the project's source code"],
+        "answer": "To provide an exact version of each dependency",
+        "explanation": "The `package-lock.json` file records the exact version, checksum, and location of every package installed, ensuring consistent builds across different environments."
+      },
+      {
+        "id": 17,
+        "question": "What is 'callback hell'?",
+        "options": ["A bug that crashes the server", "A state where a function is called without a callback", "A situation with deeply nested callbacks", "An error handling pattern"],
+        "answer": "A situation with deeply nested callbacks",
+        "explanation": "Callback hell, also known as the 'Pyramid of Doom,' refers to the unmanageable nesting of callback functions that makes code difficult to read and maintain."
+      },
+      {
+        "id": 18,
+        "question": "How can you debug a Node.js application?",
+        "options": ["`node --debug`", "`node --log`", "`node --trace`", "`node --inspect`"],
+        "answer": "`node --inspect`",
+        "explanation": "The `node --inspect` command enables the V8 inspector, which allows you to debug your Node.js application using tools like Chrome DevTools."
+      },
+      {
+        "id": 19,
+        "question": "What is the `cluster` module used for?",
+        "options": ["To create multiple databases", "To manage user sessions", "To enable multi-core processing", "To compress files"],
+        "answer": "To enable multi-core processing",
+        "explanation": "The `cluster` module allows you to create child processes that share server ports, enabling a Node.js application to take advantage of multi-core systems and improve performance for CPU-intensive tasks."
+      },
+      {
+        "id": 20,
+        "question": "What is the difference between `require()` and `import` in Node.js?",
+        "options": ["`require` is for CommonJS, `import` is for ES6 Modules", "`require` is asynchronous, `import` is synchronous", "They are identical, just different syntax", "`require` is for local files, `import` is for npm packages"],
+        "answer": "`require` is for CommonJS, `import` is for ES6 Modules",
+        "explanation": "The `require()` function is part of the older CommonJS module system, while the `import` statement is part of the modern ES6 Modules standard."
+      }
+    ],
+    "hard": [
+      {
+        "id": 21,
+        "question": "Differentiate between `process.nextTick()` and `setImmediate()`.",
+        "options": ["`nextTick` runs after the current operation, `setImmediate` runs in the next event loop phase.", "`nextTick` runs in a separate thread, `setImmediate` runs on the main thread.", "They are identical in function.", "`nextTick` is for timers, `setImmediate` is for I/O operations."],
+        "answer": "`nextTick` runs after the current operation, `setImmediate` runs in the next event loop phase.",
+        "explanation": "Both are asynchronous but `process.nextTick()` callbacks are executed before the event loop moves to the next phase, while `setImmediate()` callbacks are executed in the 'check' phase of the event loop."
+      },
+      {
+        "id": 22,
+        "question": "What is a 'Buffer' in Node.js?",
+        "options": ["A type of error", "A temporary storage for binary data", "A tool for handling strings", "A data structure for numbers only"],
+        "answer": "A temporary storage for binary data",
+        "explanation": "The `Buffer` class is used to handle raw binary data. It is a fundamental part of Node.js's I/O operations, such as handling file streams and network packets."
+      },
+      {
+        "id": 23,
+        "question": "How does Node.js handle concurrency?",
+        "options": ["By creating a new thread for each request", "By using a single-threaded event loop and non-blocking I/O", "By relying on the browser's multi-threading", "It cannot handle concurrency"],
+        "answer": "By using a single-threaded event loop and non-blocking I/O",
+        "explanation": "Node.js achieves concurrency by using a single thread to manage an event loop, which handles asynchronous operations without blocking the main thread, making it highly scalable."
+      },
+      {
+        "id": 24,
+        "question": "What is the purpose of `EventEmitter`?",
+        "options": ["To handle network requests", "To read and write files", "To manage and emit events with listeners", "To manage sessions"],
+        "answer": "To manage and emit events with listeners",
+        "explanation": "The `EventEmitter` class is a core part of Node.js's event-driven architecture. It provides a way for objects to emit named events that trigger functions attached to those events."
+      },
+      {
+        "id": 25,
+        "question": "What is 'Piping' in Node.js streams?",
+        "options": ["Connecting two databases", "Connecting the output of one stream to the input of another", "A method for creating a server", "A way to handle errors in streams"],
+        "answer": "Connecting the output of one stream to the input of another",
+        "explanation": "Piping is a mechanism that connects a readable stream to a writable stream, allowing data to flow from one to the other automatically."
+      },
+      {
+        "id": 26,
+        "question": "What is an 'error-first callback'?",
+        "options": ["A function that always returns an error", "A callback function where the first argument is always an error object", "A method for debugging errors in Node.js", "A callback that handles errors only"],
+        "answer": "A callback function where the first argument is always an error object",
+        "explanation": "In Node.js, the 'error-first callback' is a common convention where the first argument of a callback function is reserved for an error object, and the second is for the result."
+      },
+      {
+        "id": 27,
+        "question": "What is the Reactor Pattern in Node.js?",
+        "options": ["A design pattern for creating web servers", "A pattern for managing asynchronous I/O with an event loop", "A method for handling database connections", "A framework for building APIs"],
+        "answer": "A pattern for managing asynchronous I/O with an event loop",
+        "explanation": "The Reactor Pattern is an event-driven design for handling service requests that come in from multiple clients. It uses an event loop to handle requests and dispatch them to appropriate handlers."
+      },
+      {
+        "id": 28,
+        "question": "What is `libuv`?",
+        "options": ["A JavaScript library", "A C++ library that provides the event loop and thread pool", "A Node.js module for security", "An npm package for file uploads"],
+        "answer": "A C++ library that provides the event loop and thread pool",
+        "explanation": "Libuv is a C++ library that provides the event loop, asynchronous I/O, and a thread pool. It is the engine that allows Node.js to perform its non-blocking operations."
+      },
+      {
+        "id": 29,
+        "question": "What is the difference between `spawn()` and `fork()` in the `child_process` module?",
+        "options": ["`spawn` is for Node.js scripts, `fork` is for any command.", "`spawn` returns an object with IPC, `fork` does not.", "`fork` is a special case of `spawn` with IPC enabled.", "They are identical."],
+        "answer": "`fork` is a special case of `spawn` with IPC enabled.",
+        "explanation": "Both create a child process, but `fork()` is a specialized version of `spawn()` that is used to spawn new Node.js processes and establish an Inter-Process Communication (IPC) channel."
+      },
+      {
+        "id": 30,
+        "question": "What is the purpose of `fs.promises`?",
+        "options": ["To provide a synchronous API for file operations", "To use Promises with the file system module", "To handle asynchronous file operations with callbacks", "To read and write JSON files"],
+        "answer": "To use Promises with the file system module",
+        "explanation": "The `fs.promises` API provides an alternative to the traditional callback-based file system methods, allowing you to use `async/await` and Promises for cleaner asynchronous code."
+      }
+    ],
+    "hard": [
+      {
+        "id": 31,
+        "question": "Explain how you would handle a CPU-intensive task in Node.js?",
+        "options": ["Use a long-running synchronous function", "Use the `cluster` module or `Worker Threads`", "Use `setTimeout` to delay the task", "Run the task inside the main event loop"],
+        "answer": "Use the `cluster` module or `Worker Threads`",
+        "explanation": "CPU-intensive tasks can block the single-threaded event loop. Using the `cluster` module to create multiple processes or `Worker Threads` to run code on separate threads is the recommended approach to prevent this."
+      },
+      {
+        "id": 32,
+        "question": "What is the purpose of `process.on('unhandledRejection', ...)`?",
+        "options": ["To handle all errors in the application", "To handle exceptions in synchronous code", "To catch promises that were not handled with a `.catch()` block", "To log server startup events"],
+        "answer": "To catch promises that were not handled with a `.catch()` block",
+        "explanation": "`unhandledRejection` is an event on the `process` object that is triggered when a Promise is rejected and no `.catch()` handler is attached to it."
+      },
+      {
+        "id": 33,
+        "question": "How do you secure a Node.js application from common attacks like XSS?",
+        "options": ["By using the `crypto` module to encrypt data", "By validating and sanitizing all user input before displaying it", "By disabling JavaScript in the browser", "By using a a separate database for user data"],
+        "answer": "By validating and sanitizing all user input before displaying it",
+        "explanation": "Cross-Site Scripting (XSS) is prevented by ensuring that all user-provided data is properly escaped or sanitized before being rendered on the page to prevent malicious scripts from being executed."
+      },
+      {
+        "id": 34,
+        "question": "How does Node.js handle memory management and garbage collection?",
+        "options": ["It requires manual memory allocation and deallocation", "It uses the V8 engine's automatic garbage collector", "It uses a dedicated npm package for memory management", "Memory is managed by the operating system directly"],
+        "answer": "It uses the V8 engine's automatic garbage collector",
+        "explanation": "Node.js relies on the V8 engine's built-in garbage collector, which automatically manages memory by reclaiming memory from objects that are no longer referenced."
+      },
+      {
+        "id": 35,
+        "question": "What is the purpose of the `Node.js` global `__dirname` variable?",
+        "options": ["The name of the current file", "The name of the current directory", "The path to the user's home directory", "The path to the `node_modules` folder"],
+        "answer": "The name of the current directory",
+        "explanation": "`__dirname` is a global variable that returns the absolute path of the directory containing the currently executing script."
+      },
+      {
+        "id": 36,
+        "question": "How do you implement authentication and authorization in a Node.js application?",
+        "options": ["By storing user data in a global variable", "By using a simple `if/else` statement for each user", "By using middleware and passport.js", "Authentication and authorization are not possible in Node.js"],
+        "answer": "By using middleware and passport.js",
+        "explanation": "Middleware and libraries like Passport.js provide a robust way to handle authentication (verifying a user's identity) and authorization (what a user is allowed to do)."
+      },
+      {
+        "id": 37,
+        "question": "What is a 'child process' in Node.js?",
+        "options": ["A process that runs on a separate machine", "A process spawned by a parent Node.js process", "A process that only handles I/O operations", "A background process managed by the operating system"],
+        "answer": "A process spawned by a parent Node.js process",
+        "explanation": "The `child_process` module allows a Node.js application to spawn new processes to execute external commands or scripts, which can be useful for CPU-intensive tasks."
+      },
+      {
+        "id": 38,
+        "question": "What is the primary difference between a synchronous and an asynchronous function in Node.js?",
+        "options": ["Synchronous functions are faster than asynchronous functions", "Synchronous functions block the execution of other code; asynchronous functions do not", "Synchronous functions use callbacks, asynchronous functions do not", "Asynchronous functions are used only for file system operations"],
+        "answer": "Synchronous functions block the execution of other code; asynchronous functions do not",
+        "explanation": "Synchronous functions run sequentially and block further execution until they are complete, while asynchronous functions run in the background without blocking the main event loop."
+      },
+      {
+        "id": 39,
+        "question": "What is a 'stub' in Node.js testing?",
+        "options": ["A tool for debugging code", "A test runner", "A mock object that simulates a component's behavior to test its interactions with other components", "A command for installing packages"],
+        "answer": "A mock object that simulates a component's behavior to test its interactions with other components",
+        "explanation": "A stub is a fake object used in unit testing to simulate the behavior of a real object. This isolates the component you are testing from its dependencies."
+      },
+      {
+        "id": 40,
+        "question": "What is the `crypto` module used for?",
+        "options": ["File I/O", "Cryptography, like hashing and encryption", "Handling network requests", "Managing user sessions"],
+        "answer": "Cryptography, like hashing and encryption",
+        "explanation": "The `crypto` module provides a suite of cryptographic functions for tasks like hashing, encryption, and decryption, which are essential for security."
+      }
+    ]
+  },
+  "laravel": {
+    "easy": [
+      {
+        "id": 1,
+        "question": "Which framework is Laravel built on?",
+        "options": ["React", "PHP", "Express", "Django"],
+        "answer": "PHP",
+        "explanation": "Laravel is a popular open-source PHP web framework."
+      },
+      {
+        "id": 2,
+        "question": "What is the command to create a new Laravel project?",
+        "options": ["`laravel new app-name`", "`create-laravel app-name`", "`composer create-project laravel/laravel app-name`", "`npm new app-name`"],
+        "answer": "`composer create-project laravel/laravel app-name`",
+        "explanation": "You use Composer, a PHP dependency manager, to create new Laravel projects."
+      },
+      {
+        "id": 3,
+        "question": "What is the command-line tool for Laravel?",
+        "options": ["`npm`", "`artisan`", "`composer`", "`php serve`"],
+        "answer": "`artisan`",
+        "explanation": "Artisan is Laravel's command-line interface, which provides many helpful commands for development."
+      },
+      {
+        "id": 4,
+        "question": "What is the purpose of the `routes/web.php` file?",
+        "options": ["To define API routes", "To define web routes", "To configure the database", "To store CSS files"],
+        "answer": "To define web routes",
+        "explanation": "The `routes/web.php` file contains all of the routes for your web application."
+      },
+      {
+        "id": 5,
+        "question": "What is the `.env` file used for in a Laravel project?",
+        "options": ["Storing environment variables", "Defining a database schema", "Listing all dependencies", "Tracking file changes with Git"],
+        "answer": "Storing environment variables",
+        "explanation": "The `.env` file is used to store environment-specific variables, such as database credentials and API keys, which are not committed to version control."
+      },
+      {
+        "id": 6,
+        "question": "What is Blade?",
+        "options": ["Laravel's database manager", "A command-line tool", "Laravel's templating engine", "A type of middleware"],
+        "answer": "Laravel's templating engine",
+        "explanation": "Blade is Laravel's lightweight and powerful templating engine, which allows you to use plain PHP in your views and provides convenient shortcuts."
+      },
+      {
+        "id": 7,
+        "question": "What is the purpose of `php artisan serve`?",
+        "options": ["To deploy the application to a server", "To start a local development server", "To run database migrations", "To clear the cache"],
+        "answer": "To start a local development server",
+        "explanation": "`php artisan serve` starts a local PHP development server so you can test your application in a browser."
+      },
+      {
+        "id": 8,
+        "question": "How do you pass data from a controller to a view?",
+        "options": ["Using a global variable", "By appending it to the URL", "Using a `with()` method", "By saving it in a session"],
+        "answer": "Using a `with()` method",
+        "explanation": "You can pass data from a controller to a view using the `with()` method on the `view()` function, for example: `return view('my-view')->with('data', $data);`."
+      },
+      {
+        "id": 9,
+        "question": "What is CSRF protection in Laravel?",
+        "options": ["A tool for managing sessions", "A security feature to prevent unauthorized requests", "A way to handle file uploads", "A method for caching data"],
+        "answer": "A security feature to prevent unauthorized requests",
+        "explanation": "CSRF (Cross-Site Request Forgery) protection is a built-in security measure in Laravel that prevents malicious requests from being sent from other sites."
+      },
+      {
+        "id": 10,
+        "question": "How do you check the Laravel version?",
+        "options": ["`php artisan --version`", "`composer --version`", "`laravel version`", "`npm --version`"],
+        "answer": "`php artisan --version`",
+        "explanation": "The `php artisan --version` command displays the current version of the Laravel framework."
+      }
+    ],
+    "medium": [
+      {
+        "id": 11,
+        "question": "What is Eloquent in Laravel?",
+        "options": ["A database migration tool", "A templating engine", "An ORM (Object-Relational Mapper)", "A command-line interface"],
+        "answer": "An ORM (Object-Relational Mapper)",
+        "explanation": "Eloquent is Laravel's powerful ORM that makes it easy to interact with your database using object-oriented syntax."
+      },
+      {
+        "id": 12,
+        "question": "What command runs all database migrations?",
+        "options": ["`php artisan migrate`", "`php artisan db:migrate`", "`php artisan run:migrations`", "`php artisan schema:run`"],
+        "answer": "`php artisan migrate`",
+        "explanation": "The `php artisan migrate` command runs all of your pending migrations."
+      },
+      {
+        "id": 13,
+        "question": "What is the purpose of a migration in Laravel?",
+        "options": ["To migrate data from one table to another", "To manage database schema changes using version control", "To create a new view file", "To seed the database with test data"],
+        "answer": "To manage database schema changes using version control",
+        "explanation": "Migrations are like version control for your database, allowing you to define and share your database schema in a team-based environment."
+      },
+      {
+        "id": 14,
+        "question": "Explain the role of 'Middleware' in Laravel.",
+        "options": ["A tool to compress assets", "A function that filters HTTP requests before they reach a controller", "A helper for creating database tables", "A component that manages user sessions"],
+        "answer": "A function that filters HTTP requests before they reach a controller",
+        "explanation": "Middleware provides a mechanism for inspecting and filtering HTTP requests entering your application. For example, the `auth` middleware verifies if a user is authenticated."
+      },
+      {
+        "id": 15,
+        "question": "What are Laravel 'Facades'?",
+        "options": ["A new type of routing", "A method for managing database connections", "A way to provide a 'static' interface to classes in the service container", "A tool for debugging"],
+        "answer": "A way to provide a 'static' interface to classes in the service container",
+        "explanation": "Facades provide a simple, static-like syntax for interacting with services in the application's service container, like `Route::get()` or `Cache::put()`."
+      },
+      {
+        "id": 16,
+        "question": "What is the purpose of the `composer.json` file?",
+        "options": ["To define a database schema", "To configure the web server", "To manage PHP dependencies", "To store application logs"],
+        "answer": "To manage PHP dependencies",
+        "explanation": "Composer is a dependency manager for PHP, and `composer.json` is the manifest file that lists all of the project's required PHP packages."
+      },
+      {
+        "id": 17,
+        "question": "How do you implement form validation in Laravel?",
+        "options": ["By writing custom JavaScript for each form", "By using a built-in `validate()` method in the controller", "By using a separate npm package", "By writing a manual SQL query"],
+        "answer": "By using a built-in `validate()` method in the controller",
+        "explanation": "Laravel provides a convenient `validate()` method on the `Request` object, which allows you to define validation rules for incoming form data."
+      },
+      {
+        "id": 18,
+        "question": "What are 'Service Providers' in Laravel?",
+        "options": ["Classes that provide external API services", "The central place to register and bootstrap application services", "A tool for handling HTTP requests", "A class for managing user sessions"],
+        "answer": "The central place to register and bootstrap application services",
+        "explanation": "Service Providers are the heart of a Laravel application. They are used to register services, bind dependencies to the service container, and configure routes, middleware, and events."
+      },
+      {
+        "id": 19,
+        "question": "What is the difference between a `GET` and a `POST` request in Laravel?",
+        "options": ["A `GET` request retrieves data, a `POST` request creates new data", "A `GET` request is faster than a `POST` request", "A `GET` request is used for a single-page app, a `POST` request is for a multi-page app", "There is no difference in Laravel"],
+        "answer": "A `GET` request retrieves data, a `POST` request creates new data",
+        "explanation": "As per standard HTTP conventions, a `GET` request is used to fetch data, while a `POST` request is used to submit new data to the server."
+      },
+      {
+        "id": 20,
+        "question": "What is 'Seeding' in Laravel?",
+        "options": ["The process of creating new database tables", "A way to populate the database with fake data for testing", "A tool for managing user sessions", "A command-line interface"],
+        "answer": "A way to populate the database with fake data for testing",
+        "explanation": "Seeding is the process of populating your database tables with dummy data, which is especially useful for development and testing purposes."
+      }
+    ],
+    "hard": [
+      {
+        "id": 21,
+        "question": "How do you define a one-to-many relationship in Eloquent?",
+        "options": ["`hasMany` and `belongsTo`", "`hasOne` and `hasMany`", "`belongsToMany` and `hasOne`", "`hasOne` and `belongsTo`"],
+        "answer": "`hasMany` and `belongsTo`",
+        "explanation": "The 'one' side of the relationship uses `hasMany`, while the 'many' side uses `belongsTo`."
+      },
+      {
+        "id": 22,
+        "question": "What is the purpose of Laravel's Service Container?",
+        "options": ["To store all application files", "To manage class dependencies and perform dependency injection", "To handle all HTTP requests", "To serve as a database cache"],
+        "answer": "To manage class dependencies and perform dependency injection",
+        "explanation": "The service container is a powerful tool for managing class dependencies. It automatically 'injects' the required classes into your constructors or methods."
+      },
+      {
+        "id": 23,
+        "question": "What is 'Dependency Injection' and how is it used in Laravel?",
+        "options": ["A way to inject a database into your application", "A design pattern where class dependencies are 'injected' rather than hardcoded inside the class", "A method for handling form validation", "A way to manage multiple user accounts"],
+        "answer": "A design pattern where class dependencies are 'injected' rather than hardcoded inside the class",
+        "explanation": "Dependency Injection is a design pattern that Laravel uses to manage dependencies. Instead of creating new objects inside a class, they are passed into the constructor or method, which makes the code more flexible and easier to test."
+      },
+      {
+        "id": 24,
+        "question": "Explain the difference between Laravel `Auth` and `Guards`.",
+        "options": ["`Auth` handles login, `Guards` handle logout", "`Auth` is for web, `Guards` are for APIs", "`Auth` is the facade, while `Guards` define the authentication logic", "`Auth` is a global variable, `Guards` are local"],
+        "answer": "`Auth` is the facade, while `Guards` define the authentication logic",
+        "explanation": "The `Auth` facade provides a static interface for authentication. A `Guard` defines how users are actually authenticated for a given request, such as a session-based guard for web or a token-based guard for APIs."
+      },
+      {
+        "id": 25,
+        "question": "What are Laravel 'Pipelines'?",
+        "options": ["A method for handling queues", "A way to chain multiple middleware together", "A tool for debugging database queries", "A feature for real-time communication"],
+        "answer": "A way to chain multiple middleware together",
+        "explanation": "Pipelines are a design pattern that allows a request to be passed through a series of 'pipes' (middleware classes) in a fluid, readable manner. It's often used to build reusable logic flows."
+      },
+      {
+        "id": 26,
+        "question": "What is `php artisan storage:link` and why is it used?",
+        "options": ["To link a database to the application", "To create a symbolic link from `public/storage` to `storage/app/public`", "To link external storage services", "To clear the storage cache"],
+        "answer": "To create a symbolic link from `public/storage` to `storage/app/public`",
+        "explanation": "This command creates a symbolic link that makes files stored in the private `storage/app/public` folder publicly accessible through the `public/storage` URL."
+      },
+      {
+        "id": 27,
+        "question": "How do you define a many-to-many relationship in Eloquent?",
+        "options": ["`hasMany` and `belongsTo`", "`hasMany` and `hasMany`", "`belongsToMany`", "`hasOne`"],
+        "answer": "`belongsToMany`",
+        "explanation": "The `belongsToMany` method is used on both sides of the many-to-many relationship to define a connection through a pivot table."
+      },
+      {
+        "id": 28,
+        "question": "What is 'Polymorphic Relationships' in Eloquent?",
+        "options": ["A relationship that links multiple tables to one parent model on a single relationship", "A relationship that links a model to itself", "A relationship with no foreign key", "A relationship that only works with `belongsTo`"],
+        "answer": "A relationship that links multiple tables to one parent model on a single relationship",
+        "explanation": "A polymorphic relationship allows a model to belong to more than one other model on a single association. For example, a `Comment` model could belong to both a `Post` and a `Video`."
+      },
+      {
+        "id": 29,
+        "question": "What is the purpose of Laravel's 'Service Container'?",
+        "options": ["To store all application files", "To manage class dependencies and perform dependency injection", "To handle all HTTP requests", "To serve as a database cache"],
+        "answer": "To manage class dependencies and perform dependency injection",
+        "explanation": "The service container is a powerful tool for managing class dependencies. It automatically 'injects' the required classes into your constructors or methods."
+      },
+      {
+        "id": 30,
+        "question": "Explain the concept of 'Soft Deletes' in Laravel.",
+        "options": ["A feature that allows you to delete a database without a confirmation prompt", "A method for deleting a record without a user's permission", "A feature that 'deletes' a record by setting a timestamp instead of removing it from the database", "A way to delete files from storage"],
+        "answer": "A feature that 'deletes' a record by setting a timestamp instead of removing it from the database",
+        "explanation": "Soft Deletes is a feature that marks a record as 'deleted' by adding a timestamp to a `deleted_at` column, without actually removing it from the database. This allows you to easily restore the record later."
+      }
+    ]
+  }
 }
